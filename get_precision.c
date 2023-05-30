@@ -8,7 +8,7 @@
  */
 int get_precision(const char *format, int *i, va_list list)
 {
-	it curr_i = *i + 1;
+	int curr_i = *i + 1;
 	int precision = -1;
 
 	if (format[curr_i] != '.')
@@ -16,7 +16,7 @@ int get_precision(const char *format, int *i, va_list list)
 
 	precision = 0;
 
-	for (curr_i += 1; format[curr_i] != '\0', curr_i++)
+	for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
 	{
 		if (is_digit(format[curr_i]))
 		{
