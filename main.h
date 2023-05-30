@@ -37,7 +37,7 @@ struct fmt
  */
 typedef struct fmt fmt_t;
 
-int _print(const char *format, ...);
+int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i, va_list list, char
 		buffer[], int flags, int width, int precision, int size);
 
@@ -60,7 +60,7 @@ int print_binary(va_list types, char buffer[],
 int print_unsigned(va_list types, char buffer[],
 		int flags, int width, int size, int precision);
 int print_hexadecimal(va_list types, char buffer[],
-		int flags, int width, int size, intprecision);
+		int flags, int width, int size, int precision);
 int print_hexa_upper(va_list types, char buffer[],
 		int flags, int width, int size, int precision);
 
@@ -90,7 +90,7 @@ int handle_write_char(char c, char buffer[],
 		int flags, int width, int size, int precision);
 int write_number(int is_positive, int ind, char buffer[],
 		int flags, int width, int size, int precision);
-int write_num(int ind, char bff[], int flags, int width, int lenth,
+int write_num(int ind, char bff[], int flags, int width, int length,
 		int precision, char padd, char extra_c);
 int write_pointer(char buffer[], int ind, int length, int flags,
 		int width, char padd, char extra_c, int padd_start);
