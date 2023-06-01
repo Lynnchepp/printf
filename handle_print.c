@@ -1,4 +1,8 @@
 #include "main.h"
+int print_rot13string(va_list types, char buffer[],
+                      int flags, int width, int size, int precision);
+int print_percent(va_list types, char buffer[], int flags, int width, int size, int precision);
+
 /**
  * handle_print - Prints an argument based on its type
  * @fmt: Formatted string in which to print the arguments.
